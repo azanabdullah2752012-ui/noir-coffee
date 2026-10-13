@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story & Craft | NOIR Specialty Roasters</title>
+  <meta name="description" content="Why NOIR exists: the pursuit of quiet morning sanctuaries, small-batch Loring convection roasting, and sustainable spun-copper canisters.">
+  
+  <link rel="stylesheet" href="css/noir.css">
+</head>
+<body>
+
+  <!-- Atmospheric Substrate -->
+  <div class="atmosphere-glow" aria-hidden="true"></div>
+  <svg class="grain-overlay" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <filter id="noir-noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 1 0 0" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noir-noise)" />
+  </svg>
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-brand">
+        <a href="index.html" class="brand-logo" aria-label="NOIR Specialty Coffee">NOIR</a>
+        <span class="brand-tagline-sub">Specialty Coffee Roasters</span>
+      </div>
+
+      <nav class="masthead-nav" aria-label="Main Navigation">
+        <div class="nav-dropdown-wrap">
+          <a href="index.html#roasts" class="nav-item">
+            <span>The Roasts</span>
+            <span class="nav-dropdown-arrow">▾</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <div class="nav-dropdown-inner">
+              <a href="original.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num">01</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">The Original</span>
+                  <span class="dropdown-item-desc">Signature House Blend · Dark Chocolate</span>
+                </div>
+              </a>
+              <a href="after-hours.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num">02</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">After Hours</span>
+                  <span class="dropdown-item-desc">Nocturnal Roast · Rich Cocoa & Caramel</span>
+                </div>
+              </a>
+              <a href="first-light.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num">03</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">First Light</span>
+                  <span class="dropdown-item-desc">Luminous Light Roast · Bergamot & Jasmine</span>
+                </div>
+              </a>
+              <div class="nav-dropdown-divider"></div>
+              <a href="trio.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num" style="color: var(--noir-copper-light);">★</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">The Edition 01 Trio</span>
+                  <span class="dropdown-item-desc">All 3 Roasts + Solid Copper Scoop ($58)</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="story.html" class="nav-item" style="color: var(--noir-ivory);">Our Story</a>
+        <a href="trio.html" class="nav-item">The Trio</a>
+        <button class="masthead-bag-btn" id="bagBtn" aria-label="Open bag">
+          <span>Bag</span>
+          <span class="bag-count">(0)</span>
+        </button>
+        <button class="mobile-nav-toggle-btn" id="mobileNavToggleBtn" aria-label="Toggle navigation menu" type="button">
+          <div class="mobile-nav-icon-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span>Menu</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-nav-drawer-inner">
+      <div class="mobile-nav-drawer-header">
+        <span class="mobile-nav-drawer-title">NOIR Directory</span>
+        <button class="mobile-nav-drawer-close" id="mobileNavCloseBtn" aria-label="Close menu">✕</button>
+      </div>
+      <div class="mobile-nav-drawer-content">
+        <span class="mobile-nav-category">Signature Roasts</span>
+        <a href="original.html" class="mobile-nav-link">
+          <span class="mobile-nav-num">01</span>
+          <div>
+            <strong>The Original</strong>
+            <small>House Blend · Dark Chocolate ($24)</small>
+          </div>
+        </a>
+        <a href="after-hours.html" class="mobile-nav-link">
+          <span class="mobile-nav-num">02</span>
+          <div>
+            <strong>After Hours</strong>
+            <small>Nocturnal Roast · Rich Cocoa ($25)</small>
+          </div>
+        </a>
+        <a href="first-light.html" class="mobile-nav-link">
+          <span class="mobile-nav-num">03</span>
+          <div>
+            <strong>First Light</strong>
+            <small>Light Roast · Bergamot & Jasmine ($26)</small>
+          </div>
+        </a>
+
+        <div class="mobile-nav-divider"></div>
+
+        <span class="mobile-nav-category">Curated Box Set</span>
+        <a href="trio.html" class="mobile-nav-link">
+          <span class="mobile-nav-num" style="color: var(--noir-copper-light);">★</span>
+          <div>
+            <strong>The Edition 01 Trio</strong>
+            <small>All 3 Roasts + Solid Copper Scoop ($58)</small>
+          </div>
+        </a>
+
+        <div class="mobile-nav-divider"></div>
+
+        <span class="mobile-nav-category">About NOIR</span>
+        <a href="story.html" class="mobile-nav-link highlight">
+          <div>
+            <strong>Our Story & Roasting Craft</strong>
+            <small>Loring S35 convection & sustainable canisters</small>
+          </div>
+        </a>
+        <a href="index.html#story" class="mobile-nav-link">
+          <div>
+            <strong>Tasting Rooms</strong>
+            <small>Rotterdam (Westerkade) & Tokyo (Aoyama)</small>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Story Hero Cover -->
+    <section class="site-section" style="padding-top: 4.5rem; padding-bottom: 5rem;">
+      <span class="section-label">Philosophy & Craft</span>
+      <h1 class="section-title-large" style="max-width: 52rem; font-size: clamp(3rem, 5vw, 4.4rem); margin-bottom: 2rem;">
+        Coffee deserves more attention than people give it.
+      </h1>
+      <p style="font-size: 1.2rem; line-height: 1.8; color: var(--noir-ivory-dim); max-width: 44rem; margin-bottom: 3.5rem;">
+        We started NOIR because coffee had split into two dishonest extremes: supermarket brands roasted six months ago, or specialty coffee so intimidating you need a chemistry degree to order it. NOIR exists in between.
+      </p>
+
+      <div style="width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 3px; box-shadow: 0 16px 48px rgba(0,0,0,0.5);">
+        <img src="assets/noir-hero.jpg" alt="NOIR Roastery craftsmanship" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 1: The Sanctuary of Morning -->
+    <section class="site-section">
+      <div style="display: grid; grid-template-columns: 1fr 1.35fr; gap: 5.5rem; align-items: start;">
+        <div>
+          <span class="section-label">01 · Stillness</span>
+          <h2 class="section-title-large">Before the world gets loud.</h2>
+        </div>
+        <div style="font-size: 1.08rem; line-height: 1.85; color: var(--noir-ivory-dim); display: flex; flex-direction: column; gap: 1.5rem;">
+          <p>
+            Think about your average morning. The alarm rings. The notifications arrive. Slack messages, news alerts, calendar invitations. Before your feet touch the floor, the demands of other people have already entered your head.
+          </p>
+          <p>
+            Coffee is one of the few daily habits you do entirely for yourself. Grinding whole beans by hand. Listening to the quiet rumble of the kettle. Watching the dry grounds bloom and swell under hot water. Taking the first sip from a warm ceramic cup.
+          </p>
+          <p style="color: var(--noir-ivory); font-weight: 500;">
+            Those fifteen minutes are not an indulgence; they are an anchor. We build coffees designed to reward that moment of quiet attention.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 2: Convection Roasting Science -->
+    <section class="site-section">
+      <div style="display: grid; grid-template-columns: 1fr 1.35fr; gap: 5.5rem; align-items: start;">
+        <div>
+          <span class="section-label">02 · Precision</span>
+          <h2 class="section-title-large">Why convection airflow matters.</h2>
+        </div>
+        <div style="font-size: 1.08rem; line-height: 1.85; color: var(--noir-ivory-dim); display: flex; flex-direction: column; gap: 1.5rem;">
+          <p>
+            Most commercial roasters use traditional metal drum roasters. When coffee beans tumble against blistering 300°C cast-iron walls, the delicate surface oils scotch instantly. That scorching produces the ash, tar, and harsh bitterness that people mistake for "strong coffee."
+          </p>
+          <p>
+            At NOIR, we roast exclusively using closed-loop convection airflow on a <strong>Loring S35 Kestrel</strong>. Instead of scorching conductive metal, clean, super-heated air gently lifts and floats the beans in a cyclone of thermal energy.
+          </p>
+          <p>
+            Every single bean develops evenly from center to surface. Natural fruit sugars caramelize cleanly without burning. Delicate florals, stone fruits, and chocolate notes are preserved in pure botanical clarity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 3: Materiality & Packaging -->
+    <section class="site-section">
+      <div style="display: grid; grid-template-columns: 1fr 1.35fr; gap: 5.5rem; align-items: start;">
+        <div>
+          <span class="section-label">03 · Materiality</span>
+          <h2 class="section-title-large">Spun copper & zero waste.</h2>
+        </div>
+        <div style="font-size: 1.08rem; line-height: 1.85; color: var(--noir-ivory-dim); display: flex; flex-direction: column; gap: 1.5rem;">
+          <p>
+            Oxygen is the enemy of freshly roasted coffee. Traditional plastic-lined bags with tin ties leak volatile aromas within seventy-two hours of opening.
+          </p>
+          <p>
+            Every NOIR debut coffee ships sealed in an airtight, spun copper and deep burgundy steel canister. Engineered with food-grade nitrogen flushing and a silicone vacuum seal, it shields the beans from ambient light, moisture, and oxidation.
+          </p>
+          <p>
+            Our canisters are built to be reused for decades. When you subscribe, monthly deliveries arrive in certified compostable plant-fiber pouches—ready to refill your copper canister with zero single-use plastic waste.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Section 4: Tasting Rooms in Rotterdam & Tokyo -->
+    <section class="site-section">
+      <div style="margin-bottom: 4rem;">
+        <span class="section-label">04 · Physical Spaces</span>
+        <h2 class="section-title-large">Visit the Tasting Rooms.</h2>
+        <p style="font-size: 1.1rem; color: var(--noir-ivory-dim); max-width: 42rem;">
+          Designed as quiet sanctuaries away from street traffic. Dedicated to single-origin flights, seasonal cuppings, and manual brew rituals.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+        <!-- Rotterdam -->
+        <div style="background: var(--noir-surface); border: 1px solid var(--noir-border); border-radius: 3px; padding: 2.5rem; display: flex; flex-direction: column; gap: 1.25rem;">
+          <span style="font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--noir-copper); font-weight: 600;">
+            The Port Roastery
+          </span>
+          <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--noir-ivory);">Rotterdam Tasting Room</h3>
+          <p style="font-size: 0.95rem; line-height: 1.7; color: var(--noir-ivory-dim);">
+            Housed in an 1890s maritime warehouse along the Maas River. Featuring cast concrete, reclaimed timber benches, and our central copper brew counter overlooking the Loring convection roaster.
+          </p>
+          <div style="border-top: 1px solid var(--noir-border-subtle); padding-top: 1.25rem; font-size: 0.85rem; color: var(--noir-ivory); display: flex; flex-direction: column; gap: 0.35rem;">
+            <span><strong>Address:</strong> Westerkade 14, 3016 CL Rotterdam</span>
+            <span style="color: var(--noir-ivory-dim);"><strong>Hours:</strong> Wednesday–Sunday, 07:30 – 16:00</span>
+            <span style="color: var(--noir-copper-light); margin-top: 0.5rem;">Walk-ins welcome · Private cupping flights by appointment</span>
+          </div>
+        </div>
+
+        <!-- Tokyo -->
+        <div style="background: var(--noir-surface); border: 1px solid var(--noir-border); border-radius: 3px; padding: 2.5rem; display: flex; flex-direction: column; gap: 1.25rem;">
+          <span style="font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--noir-copper); font-weight: 600;">
+            The Alley Sanctuary
+          </span>
+          <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--noir-ivory);">Tokyo Roastery</h3>
+          <p style="font-size: 0.95rem; line-height: 1.7; color: var(--noir-ivory-dim);">
+            Tucked into a quiet residential lane behind Aoyama-dori. Built with traditional charred cedar (shou sugi ban), minimal raked limestone, and a six-seat counter dedicated to manual siphon and pour-over service.
+          </p>
+          <div style="border-top: 1px solid var(--noir-border-subtle); padding-top: 1.25rem; font-size: 0.85rem; color: var(--noir-ivory); display: flex; flex-direction: column; gap: 0.35rem;">
+            <span><strong>Address:</strong> 3-12-8 Minami-Aoyama, Minato-ku, Tokyo</span>
+            <span style="color: var(--noir-ivory-dim);"><strong>Hours:</strong> Daily, 08:00 – 17:00</span>
+            <span style="color: var(--noir-copper-light); margin-top: 0.5rem;">Six-seat bar · Omakase roast flights daily</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA Bar -->
+    <section class="site-section" style="padding-top: 4rem; padding-bottom: 6rem;">
+      <div style="background: #190509; border: 1px solid var(--noir-border); border-radius: 3px; padding: 3.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+        <div>
+          <span style="font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--noir-copper); font-weight: 600; display: block; margin-bottom: 0.5rem;">
+            Debut Collection
+          </span>
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--noir-ivory); margin-bottom: 0.5rem;">
+            Discover the three debut coffees.
+          </h2>
+          <p style="color: var(--noir-ivory-dim); font-size: 1rem;">
+            From the reassuring morning anchor to quiet nocturnal depth.
+          </p>
+        </div>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="index.html#roasts" class="btn-primary">
+            Explore All Roasts ↓
+          </a>
+          <a href="trio.html" class="btn-ghost-link" style="padding-top: 0.85rem;">
+            The Edition 01 Trio ($58) →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Colophon Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner-grid">
+      <div class="footer-brand">
+        <h2>NOIR</h2>
+        <p>Specialty coffee roastery. Turning everyday morning cups into small, intentional rituals.</p>
+        <span class="footer-brand-locations">Rotterdam · Tokyo · Est. 2026</span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tasting Rooms</h4>
+        <ul class="footer-nav-list">
+          <li><strong>Rotterdam:</strong> Westerkade 14</li>
+          <li style="color: var(--noir-ivory-faint); font-size: 0.82rem;">Wed–Sun: 07:30 – 16:00</li>
+          <li style="margin-top: 0.5rem;"><strong>Tokyo:</strong> 3-12-8 Minami-Aoyama</li>
+          <li style="color: var(--noir-ivory-faint); font-size: 0.82rem;">Daily: 08:00 – 17:00</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>The Roasts</h4>
+        <ul class="footer-nav-list">
+          <li><a href="original.html">01 The Original</a></li>
+          <li><a href="after-hours.html">02 After Hours</a></li>
+          <li><a href="first-light.html">03 First Light</a></li>
+          <li><a href="trio.html">Edition 01 Trio</a></li>
+          <li><a href="story.html">Our Story</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>The Morning Dispatch</h4>
+        <p class="footer-newsletter-text">A quiet fortnightly note on roast releases and morning habits. No spam.</p>
+        <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to The Morning Dispatch.');">
+          <input type="email" class="newsletter-input" placeholder="Your email" required>
+          <button type="submit" class="newsletter-btn">Join</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-legal-bar">
+      <span>© 2026 NOIR Specialty Roasters. All rights reserved.</span>
+      <span>Make time for the ritual.</span>
+      <span>Complimentary shipping over $50</span>
+    </div>
+  </footer>
+
+  <!-- Slide-over Bag Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true">
+    <aside class="ritual-drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <div class="drawer-header">
+        <h3 id="drawerTitle" class="drawer-title">Your Bag</h3>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close bag">✕</button>
+      </div>
+
+      <div class="shipping-meter-wrap" id="shippingMeter">
+        <span class="shipping-meter-text" id="shippingMeterText">Add $50.00 for complimentary courier delivery</span>
+        <div class="shipping-progress-track">
+          <div class="shipping-progress-fill" id="shippingMeterFill"></div>
+        </div>
+      </div>
+
+      <div class="drawer-items" id="drawerItems">
+        <!-- Rendered dynamically by noir.js -->
+      </div>
+
+      <div class="drawer-footer">
+        <div class="drawer-subtotal-row">
+          <span class="drawer-subtotal-label">Subtotal</span>
+          <span class="drawer-subtotal-val" id="drawerSubtotal">$0.00</span>
+        </div>
+        <button class="btn-checkout" id="drawerCheckoutBtn">
+          Proceed to Checkout
+        </button>
+        <p class="drawer-dispatch-note">
+          Complimentary courier dispatch on orders over $50
+        </p>
+      </div>
+    </aside>
+  </div>
+
+  <script src="js/noir.js"></script>
+</body>
+</html>

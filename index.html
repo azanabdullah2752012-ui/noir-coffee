@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIR — Make Time for the Ritual | Specialty Coffee</title>
+  <meta name="description" content="NOIR is an independent specialty coffee roaster. Three signature roasts crafted for quiet mornings and intentional rituals. Sealed in refillable copper-accented canisters.">
+  
+  <link rel="stylesheet" href="css/noir.css">
+</head>
+<body>
+
+  <!-- Subtle Atmospheric Substrate: Micrograin texture and warm lighting -->
+  <div class="atmosphere-glow" aria-hidden="true"></div>
+  <svg class="grain-overlay" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <filter id="noir-noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noir-noise)" />
+  </svg>
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-brand">
+        <a href="#hero" class="brand-logo" aria-label="NOIR Specialty Coffee">NOIR</a>
+        <span class="brand-tagline-sub">Specialty Coffee Roasters</span>
+      </div>
+
+      <nav class="masthead-nav" aria-label="Main Navigation">
+        <div class="nav-dropdown-wrap">
+          <a href="#roasts" class="nav-item">
+            <span>The Roasts</span>
+            <span class="nav-dropdown-arrow">▾</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <div class="nav-dropdown-inner">
+              <a href="original.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num">01</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">The Original</span>
+                  <span class="dropdown-item-desc">Signature House Blend · Dark Chocolate</span>
+                </div>
+              </a>
+              <a href="after-hours.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num">02</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">After Hours</span>
+                  <span class="dropdown-item-desc">Nocturnal Roast · Rich Cocoa & Caramel</span>
+                </div>
+              </a>
+              <a href="first-light.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num">03</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">First Light</span>
+                  <span class="dropdown-item-desc">Luminous Light Roast · Bergamot & Jasmine</span>
+                </div>
+              </a>
+              <div class="nav-dropdown-divider"></div>
+              <a href="trio.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num" style="color: var(--noir-copper-light);">★</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">The Edition 01 Trio</span>
+                  <span class="dropdown-item-desc">All 3 Roasts + Solid Copper Scoop ($58)</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="story.html" class="nav-item">Our Story</a>
+        <a href="trio.html" class="nav-item">The Trio</a>
+        <button class="masthead-bag-btn" id="bagBtn" aria-label="Open bag">
+          <span>Bag</span>
+          <span class="bag-count">(0)</span>
+        </button>
+        <button class="mobile-nav-toggle-btn" id="mobileNavToggleBtn" aria-label="Toggle navigation menu" type="button">
+          <div class="mobile-nav-icon-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span>Menu</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-nav-drawer-inner">
+      <div class="mobile-nav-drawer-header">
+        <span class="mobile-nav-drawer-title">NOIR Directory</span>
+        <button class="mobile-nav-drawer-close" id="mobileNavCloseBtn" aria-label="Close menu">✕</button>
+      </div>
+      <div class="mobile-nav-drawer-content">
+        <span class="mobile-nav-category">Signature Roasts</span>
+        <a href="original.html" class="mobile-nav-link">
+          <span class="mobile-nav-num">01</span>
+          <div>
+            <strong>The Original</strong>
+            <small>House Blend · Dark Chocolate ($24)</small>
+          </div>
+        </a>
+        <a href="after-hours.html" class="mobile-nav-link">
+          <span class="mobile-nav-num">02</span>
+          <div>
+            <strong>After Hours</strong>
+            <small>Nocturnal Roast · Rich Cocoa ($25)</small>
+          </div>
+        </a>
+        <a href="first-light.html" class="mobile-nav-link">
+          <span class="mobile-nav-num">03</span>
+          <div>
+            <strong>First Light</strong>
+            <small>Light Roast · Bergamot & Jasmine ($26)</small>
+          </div>
+        </a>
+
+        <div class="mobile-nav-divider"></div>
+
+        <span class="mobile-nav-category">Curated Box Set</span>
+        <a href="trio.html" class="mobile-nav-link highlight">
+          <span class="mobile-nav-num" style="color: var(--noir-copper-light);">★</span>
+          <div>
+            <strong>The Edition 01 Trio</strong>
+            <small>All 3 Roasts + Solid Copper Scoop ($58)</small>
+          </div>
+        </a>
+
+        <div class="mobile-nav-divider"></div>
+
+        <span class="mobile-nav-category">About NOIR</span>
+        <a href="story.html" class="mobile-nav-link">
+          <div>
+            <strong>Our Story & Roasting Craft</strong>
+            <small>Loring S35 convection & sustainable canisters</small>
+          </div>
+        </a>
+        <a href="#story" class="mobile-nav-link">
+          <div>
+            <strong>Tasting Rooms</strong>
+            <small>Rotterdam (Westerkade) & Tokyo (Aoyama)</small>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section class="site-section hero-section" id="hero">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Edition 01 · Debut Collection</span>
+          
+          <h1 class="hero-headline">
+            Make time for<br>
+            <em>the ritual.</em>
+          </h1>
+
+          <p class="hero-description">
+            The smell of freshly ground beans. The first pour in the morning. The few minutes you claim for yourself before the world gets loud. We turn an ordinary cup into an everyday sanctuary.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#roasts" class="btn-primary">
+              <span>Explore the Roasts</span>
+              <span style="font-size: 0.95rem; line-height: 1;">↓</span>
+            </a>
+            <a href="trio.html" class="btn-ghost-link">
+              Discover the Edition 01 Trio ($58) →
+            </a>
+          </div>
+
+          <!-- Direct Quick-Access to Dedicated Product Pages -->
+          <div class="hero-quick-roasts">
+            <span class="quick-roasts-label">Direct Roast Pages:</span>
+            <a href="original.html" class="quick-roast-pill">01 The Original <span>(House Blend)</span> →</a>
+            <a href="after-hours.html" class="quick-roast-pill">02 After Hours <span>(Nocturnal)</span> →</a>
+            <a href="first-light.html" class="quick-roast-pill">03 First Light <span>(Luminous)</span> →</a>
+            <a href="trio.html" class="quick-roast-pill" style="border-color: rgba(198, 125, 90, 0.4); color: var(--noir-copper-light);">★ The Trio <span>($58 Box)</span> →</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <img 
+              src="assets/noir-01-the-original-wide.jpg" 
+              alt="NOIR The Original signature canister, whole beans, and ceramic cup in morning slate light"
+            >
+          </div>
+          <div class="hero-image-note">
+            <span>The Original — Spun copper canister & morning slate</span>
+            <span>Rotterdam · Tokyo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- 2. THE THREE SIGNATURE ROASTS -->
+    <section class="site-section" id="roasts">
+      <div class="section-header-clean">
+        <span class="section-label">The Collection</span>
+        <h2 class="section-title-large">Three signature coffees.</h2>
+        <p class="section-subtitle-clean">
+          Crafted for how you actually drink coffee — from your reassuring morning anchor to quiet nocturnal depth.
+        </p>
+      </div>
+
+      <!-- Interactive Coffee Matcher Strip -->
+      <div class="ritual-finder-strip">
+        <div class="ritual-finder-header">
+          <span class="ritual-finder-title">Find Your Morning Roast</span>
+          <span class="ritual-finder-sub">Click a profile to reveal your coffee</span>
+        </div>
+        <div class="ritual-finder-cards">
+          <div class="ritual-option-card" data-match="roast-01">
+            <span class="ritual-opt-time">07:00 AM Essential</span>
+            <h4 class="ritual-opt-name">The Original</h4>
+            <p class="ritual-opt-notes">Balanced & smooth with dark chocolate and hazelnut. The everyday anchor.</p>
+            <a href="original.html" class="ritual-opt-link">Explore 01 The Original Page →</a>
+          </div>
+          <div class="ritual-option-card" data-match="roast-02">
+            <span class="ritual-opt-time">Late Evening Depth</span>
+            <h4 class="ritual-opt-name">After Hours</h4>
+            <p class="ritual-opt-notes">Darker, velvety cocoa and bourbon caramel with zero bitter smoke.</p>
+            <a href="after-hours.html" class="ritual-opt-link">Explore 02 After Hours Page →</a>
+          </div>
+          <div class="ritual-option-card" data-match="roast-03">
+            <span class="ritual-opt-time">Slow Daylight Drip</span>
+            <h4 class="ritual-opt-name">First Light</h4>
+            <p class="ritual-opt-notes">Tea-like clarity with bergamot citrus and floral wild jasmine.</p>
+            <a href="first-light.html" class="ritual-opt-link">Explore 03 First Light Page →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="roast-showcase-list">
+        
+        <!-- ROAST 01: THE ORIGINAL -->
+        <article class="roast-card-layout" id="roast-01">
+          <a href="original.html" class="roast-visual-link" aria-label="View 01 The Original roast details">
+            <div class="roast-visual-frame">
+              <img 
+                src="assets/noir-01-the-original-wide.jpg" 
+                alt="NOIR Roast 01 The Original canister, beans and ceramic cup" 
+                loading="lazy"
+              >
+            </div>
+            <div class="roast-visual-badge-overlay">
+              <span>View Roast Details & Terroir →</span>
+            </div>
+          </a>
+
+          <div class="roast-details">
+            <span class="roast-number-badge">01 — The Everyday Favourite</span>
+            <h3 class="roast-title"><a href="original.html" style="color: inherit; text-decoration: none;">The Original</a></h3>
+            <span class="roast-subtitle">Signature House Blend</span>
+
+            <p class="roast-story">
+              Our signature house blend. Balanced, smooth, and deeply reassuring. Roasted slowly to develop natural sweetness without a trace of bitter smoke. Built for the quiet thirty minutes before your day demands answers.
+            </p>
+
+            <div class="roast-tasting-bar">
+              <span class="tasting-bar-label">Tasting Notes</span>
+              <span class="tasting-bar-notes">Dark chocolate, toasted hazelnut, and dried fig.</span>
+            </div>
+
+            <!-- Expandable Profile Sheet -->
+            <button class="roast-expand-btn" data-toggle="drawer-01" type="button">
+              <span>+ Origin, Profile & Brew Method</span>
+            </button>
+            <div class="roast-profile-drawer" id="drawer-01">
+              <div class="profile-meta-row">
+                <span class="profile-meta-key">Provenance</span>
+                <span class="profile-meta-val">Yirgacheffe & Antigua Bourbon · 1,850m</span>
+              </div>
+              <div class="profile-meta-row">
+                <span class="profile-meta-key">Sensory Balance</span>
+                <span class="profile-scale-dots">Sweetness ●●●●○ · Body ●●●●○ · Acidity ●●○○○</span>
+              </div>
+              <div class="profile-meta-row">
+                <span class="profile-meta-key">Ideal Extraction</span>
+                <span class="profile-meta-val">Espresso, Moka Pot, Aeropress & Drip</span>
+              </div>
+            </div>
+
+            <div class="roast-purchase-zone">
+              <!-- Subscription Frequency Selector -->
+              <div class="order-type-bar" role="radiogroup">
+                <button class="order-type-btn active" type="button" data-freq="once" data-price="24">One-Time ($24)</button>
+                <button class="order-type-btn" type="button" data-freq="sub" data-price="21">Subscribe ($21 · Save 12%)</button>
+              </div>
+
+              <div class="grind-select-group">
+                <span class="grind-label">Format:</span>
+                <div class="grind-toggle-bar" role="radiogroup">
+                  <button class="grind-opt-btn active" type="button">Whole Bean</button>
+                  <button class="grind-opt-btn" type="button">Ground</button>
+                </div>
+              </div>
+
+              <div class="roast-buy-row">
+                <div class="roast-price-tag" data-base-price="24">$24 <span>/ 250g</span></div>
+                <a href="original.html" class="btn-view-details">View Details</a>
+                <button class="btn-add-bag" data-action="add-roast" data-roast-id="01">
+                  Quick Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ROAST 02: AFTER HOURS (INVERTED LAYOUT) -->
+        <article class="roast-card-layout layout-inverted" id="roast-02">
+          <div class="roast-details">
+            <span class="roast-number-badge">02 — For Depth & Evening</span>
+            <h3 class="roast-title"><a href="after-hours.html" style="color: inherit; text-decoration: none;">After Hours</a></h3>
+            <span class="roast-subtitle">Nocturnal Roast</span>
+
+            <p class="roast-story">
+              A darker, more intense roast for quiet evenings and those who prefer depth. Rich cocoa and molten caramel roasted cleanly so it retains velvet sweetness with a long, satisfying finish.
+            </p>
+
+            <div class="roast-tasting-bar">
+              <span class="tasting-bar-label">Tasting Notes</span>
+              <span class="tasting-bar-notes">Rich cocoa, molten caramel, and bourbon oak.</span>
+            </div>
+
+            <!-- Expandable Profile Sheet -->
+            <button class="roast-expand-btn" data-toggle="drawer-02" type="button">
+              <span>+ Origin, Profile & Brew Method</span>
+            </button>
+            <div class="roast-profile-drawer" id="drawer-02">
+              <div class="profile-meta-row">
+                <span class="profile-meta-key">Provenance</span>
+                <span class="profile-meta-val">Sumatra Gayo & Colombia Huila · 1,920m</span>
+              </div>
+              <div class="profile-meta-row">
+                <span class="profile-meta-key">Sensory Balance</span>
+                <span class="profile-scale-dots">Sweetness ●●●○○ · Body ●●●●● · Acidity ●○○○○</span>
+              </div>
+              <div class="profile-meta-row">
+                <span class="profile-meta-key">Ideal Extraction</span>
+                <span class="profile-meta-val">French Press, Espresso & Moka Pot</span>
+              </div>
+            </div>
+
+            <div class="roast-purchase-zone">
+              <!-- Subscription Frequency Selector -->
+              <div class="order-type-bar" role="radiogroup">
+                <button class="order-type-btn active" type="button" data-freq="once" data-price="25">One-Time ($25)</button>
+                <button class="order-type-btn" type="button" data-freq="sub" data-price="22">Subscribe ($22 · Save 12%)</button>
+              </div>
+
+              <div class="grind-select-group">
+                <span class="grind-label">Format:</span>
+                <div class="grind-toggle-bar" role="radiogroup">
+                  <button class="grind-opt-btn active" type="button">Whole Bean</button>
+                  <button class="grind-opt-btn" type="button">Ground</button>
+                </div>
+              </div>
+
+              <div class="roast-buy-row">
+                <div class="roast-price-tag" data-base-price="25">$25 <span>/ 250g</span></div>
+                <a href="after-hours.html" class="btn-view-details">View Details</a>
+                <button class="btn-add-bag" data-action="add-roast" data-roast-id="02">
+                  Quick Add
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <a href="after-hours.html" class="roast-visual-link" aria-label="View 02 After Hours roast details">
+            <div class="roast-visual-frame">
+              <img 
+                src="assets/noir-02-after-hours-wide.jpg" 
+                alt="NOIR Roast 02 After Hours dark wood nocturnal coffee still" 
+                loading="lazy"
+              >
+            </div>
+            <div class="roast-visual-badge-overlay">
+              <span>View Roast Details & Terroir →</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- ROAST 03: FIRST LIGHT -->
+        <article class="roast-card-layout" id="roast-03">
+          <a href="first-light.html" class="roast-visual-link" aria-label="View 03 First Light roast details">
+            <div class="roast-visual-frame">
+              <img 
+                src="assets/noir-03-first-light-wide.jpg" 
+                alt="NOIR Roast 03 First Light luminous light roast on pale oak table" 
+                loading="lazy"
+              >
+            </div>
+            <div class="roast-visual-badge-overlay">
+              <span>View Roast Details & Terroir →</span>
+            </div>
+          </a>
+
+          <div class="roast-details">
+            <span class="roast-number-badge">03 — For Slower Mornings</span>
+            <h3 class="roast-title"><a href="first-light.html" style="color: inherit; text-decoration: none;">First Light</a></h3>
+            <span class="roast-subtitle">Luminous Light Roast</span>
+
+            <p class="roast-story">
+              A brighter, lighter roast roasted for manual drip and chemex clarity. Delicate, tea-like elegance with aromatic citrus and stone fruit that rewards curious palates and slow weekend mornings.
+            </p>
+
+            <div class="roast-tasting-bar">
+              <span class="tasting-bar-label">Tasting Notes</span>
+              <span class="tasting-bar-notes">Bergamot citrus, wild jasmine, and white peach.</span>
+            </div>
+
+            <!-- Expandable Profile Sheet -->
+            <button class="roast-expand-btn" data-toggle="drawer-03" type="button">
+              <span>+ Origin, Profile & Brew Method</span>
+            </button>
+            <div class="roast-profile-drawer" id="drawer-03">
+              <div class="profile-meta-row">
+                <span class="profile-meta-key">Provenance</span>
+                <span class="profile-meta-val">Sidama Bensa & Kenya Nyeri · 2,100m</span>
+              </div>
+              <div class="profile-meta-row">
+                <span class="profile-meta-key">Sensory Balance</span>
+                <span class="profile-scale-dots">Sweetness ●●●●○ · Body ●●○○○ · Acidity ●●●●○</span>
+              </div>
+              <div class="profile-meta-row">
+                <span class="profile-meta-key">Ideal Extraction</span>
+                <span class="profile-meta-val">Kalita Wave, V60, Chemex & Aeropress</span>
+              </div>
+            </div>
+
+            <div class="roast-purchase-zone">
+              <!-- Subscription Frequency Selector -->
+              <div class="order-type-bar" role="radiogroup">
+                <button class="order-type-btn active" type="button" data-freq="once" data-price="26">One-Time ($26)</button>
+                <button class="order-type-btn" type="button" data-freq="sub" data-price="23">Subscribe ($23 · Save 12%)</button>
+              </div>
+
+              <div class="grind-select-group">
+                <span class="grind-label">Format:</span>
+                <div class="grind-toggle-bar" role="radiogroup">
+                  <button class="grind-opt-btn active" type="button">Whole Bean</button>
+                  <button class="grind-opt-btn" type="button">Ground</button>
+                </div>
+              </div>
+
+              <div class="roast-buy-row">
+                <div class="roast-price-tag" data-base-price="26">$26 <span>/ 250g</span></div>
+                <a href="first-light.html" class="btn-view-details">View Details</a>
+                <button class="btn-add-bag" data-action="add-roast" data-roast-id="03">
+                  Quick Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- 3. BRAND STORY -->
+    <section class="site-section story-section" id="story">
+      <blockquote class="story-lead-quote">
+        "We care about quality, craftsmanship, and details. We don't need gold lettering on everything to prove we're expensive. Coffee deserves more attention than people give it."
+      </blockquote>
+
+      <div class="story-columns-grid">
+        <div class="story-column">
+          <h3>Quiet Mornings</h3>
+          <p>
+            Before the morning rush begins and before the notifications arrive, there is a ten-minute window that belongs entirely to you.
+          </p>
+          <p>
+            Grinding whole beans, watching the bloom swell under hot water, feeling the weight of the ceramic cup in your hands. We started NOIR to make that morning moment count.
+          </p>
+        </div>
+
+        <div class="story-column">
+          <h3>Small-Batch Convection Roasting</h3>
+          <p>
+            Traditional drum roasters burn delicate surface oils against scorching metal. We roast in small batches using clean convection airflow, preserving the pure origin sweetness of every harvest.
+          </p>
+          <p>
+            Each roast is sealed in our signature airtight spun copper and matte burgundy canisters to stay fresh until the final cup.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- 4. THE LAUNCH TRIO FEATURE -->
+    <section class="site-section trio-section" id="trio">
+      <div class="trio-grid">
+        <div class="trio-visual">
+          <a href="trio.html" style="display: block; text-decoration: none;" aria-label="View The Edition 01 Trio unboxing details">
+            <img 
+              src="assets/noir-trio-collection.jpg" 
+              alt="NOIR The Edition 01 Trio collection with 3 canisters and copper scoop" 
+              loading="lazy"
+            >
+          </a>
+        </div>
+
+        <div class="trio-content">
+          <span class="trio-eyebrow">Curated Discovery Box</span>
+          <h2 class="trio-title">
+            <a href="trio.html" style="color: inherit; text-decoration: none;">The Edition 01 Trio</a>
+          </h2>
+          
+          <p class="trio-body">
+            Experience the complete spectrum of NOIR. All three debut coffees in full 250g spun copper canisters, accompanied by our hand-hammered solid copper measuring scoop in an obsidian presentation gift box.
+          </p>
+
+          <ul class="trio-inclusions">
+            <li>1 × 250g Roast 01 The Original (Dark chocolate & hazelnut)</li>
+            <li>1 × 250g Roast 02 After Hours (Rich cocoa & caramel)</li>
+            <li>1 × 250g Roast 03 First Light (Bergamot & wild jasmine)</li>
+            <li>Hand-hammered solid copper 15g measuring scoop included</li>
+          </ul>
+
+          <div class="trio-action-line" style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+            <div class="trio-price-block">
+              <span class="trio-price-val">$58</span>
+              <span class="trio-price-orig">$75</span>
+            </div>
+            <a href="trio.html" class="btn-card-details">
+              View Unboxing Details →
+            </a>
+            <button class="btn-primary" data-action="add-trio">
+              Quick Add — $58
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 5. MINIMAL, GROUNDED FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner-grid">
+      <div class="footer-brand">
+        <h2>NOIR</h2>
+        <p>
+          Specialty coffee roastery. Turning everyday morning cups into small, intentional rituals.
+        </p>
+        <span class="footer-brand-locations">Rotterdam · Tokyo · Est. 2026</span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tasting Rooms</h4>
+        <ul class="footer-nav-list">
+          <li><strong>Rotterdam:</strong> Westerkade 14</li>
+          <li style="color: var(--noir-ivory-faint); font-size: 0.82rem;">Wed–Sun: 07:30 – 16:00</li>
+          <li style="margin-top: 0.5rem;"><strong>Tokyo:</strong> 3-12-8 Minami-Aoyama</li>
+          <li style="color: var(--noir-ivory-faint); font-size: 0.82rem;">Daily: 08:00 – 17:00</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>The Roasts</h4>
+        <ul class="footer-nav-list">
+          <li><a href="original.html">01 The Original</a></li>
+          <li><a href="after-hours.html">02 After Hours</a></li>
+          <li><a href="first-light.html">03 First Light</a></li>
+          <li><a href="trio.html">Edition 01 Trio</a></li>
+          <li><a href="story.html">Our Story</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>The Morning Dispatch</h4>
+        <p class="footer-newsletter-text">
+          A quiet fortnightly note on roast releases and morning habits. No spam.
+        </p>
+        <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to The Morning Dispatch.');">
+          <input type="email" class="newsletter-input" placeholder="Your email" required>
+          <button type="submit" class="newsletter-btn">Join</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-legal-bar">
+      <span>© 2026 NOIR Specialty Roasters. All rights reserved.</span>
+      <span>Make time for the ritual.</span>
+      <span>Complimentary shipping over $50</span>
+    </div>
+  </footer>
+
+  <!-- Slide-over Bag Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true">
+    <aside class="ritual-drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <div class="drawer-header">
+        <h3 id="drawerTitle" class="drawer-title">Your Bag</h3>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close bag">✕</button>
+      </div>
+
+      <!-- Free Shipping Progress Tracker -->
+      <div class="shipping-meter-wrap" id="shippingMeter">
+        <span class="shipping-meter-text" id="shippingMeterText">Add $50.00 for complimentary courier delivery</span>
+        <div class="shipping-progress-track">
+          <div class="shipping-progress-fill" id="shippingMeterFill"></div>
+        </div>
+      </div>
+
+      <div class="drawer-items" id="drawerItems">
+        <!-- Rendered dynamically by noir.js -->
+      </div>
+
+      <div class="drawer-footer">
+        <div class="drawer-subtotal-row">
+          <span class="drawer-subtotal-label">Subtotal</span>
+          <span class="drawer-subtotal-val" id="drawerSubtotal">$0.00</span>
+        </div>
+        <button class="btn-checkout" id="drawerCheckoutBtn">
+          Proceed to Checkout
+        </button>
+        <p class="drawer-dispatch-note">
+          Complimentary courier dispatch on orders over $50
+        </p>
+      </div>
+    </aside>
+  </div>
+
+  <script src="js/noir.js"></script>
+</body>
+</html>

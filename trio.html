@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Edition 01 Trio — Discovery Box Set | NOIR Specialty Roasters</title>
+  <meta name="description" content="Experience the complete spectrum of NOIR craft. Three 250g spun copper canisters (The Original, After Hours, First Light) plus our hand-forged 15g solid copper measuring scoop in an obsidian presentation gift box.">
+  
+  <link rel="stylesheet" href="css/noir.css">
+</head>
+<body>
+
+  <!-- Atmospheric Substrate -->
+  <div class="atmosphere-glow" aria-hidden="true"></div>
+  <svg class="grain-overlay" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <filter id="noir-noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noir-noise)" />
+  </svg>
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-brand">
+        <a href="index.html" class="brand-logo" aria-label="NOIR Specialty Coffee">NOIR</a>
+        <span class="brand-tagline-sub">Specialty Coffee Roasters</span>
+      </div>
+
+      <nav class="masthead-nav" aria-label="Main Navigation">
+        <div class="nav-dropdown-wrap">
+          <a href="index.html#roasts" class="nav-item">
+            <span>The Roasts</span>
+            <span class="nav-dropdown-arrow">▾</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <div class="nav-dropdown-inner">
+              <a href="original.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num">01</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">The Original</span>
+                  <span class="dropdown-item-desc">Signature House Blend · Dark Chocolate</span>
+                </div>
+              </a>
+              <a href="after-hours.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num">02</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">After Hours</span>
+                  <span class="dropdown-item-desc">Nocturnal Roast · Rich Cocoa & Caramel</span>
+                </div>
+              </a>
+              <a href="first-light.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num">03</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">First Light</span>
+                  <span class="dropdown-item-desc">Luminous Light Roast · Bergamot & Jasmine</span>
+                </div>
+              </a>
+              <div class="nav-dropdown-divider"></div>
+              <a href="trio.html" class="nav-dropdown-item" style="background: rgba(198, 125, 90, 0.08);">
+                <span class="dropdown-item-num" style="color: var(--noir-copper-light);">★</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">The Edition 01 Trio</span>
+                  <span class="dropdown-item-desc">All 3 Roasts + Solid Copper Scoop ($58)</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="story.html" class="nav-item">Our Story</a>
+        <a href="trio.html" class="nav-item" style="color: var(--noir-copper-light);">The Trio</a>
+        <button class="masthead-bag-btn" id="bagBtn" aria-label="Open bag">
+          <span>Bag</span>
+          <span class="bag-count">(0)</span>
+        </button>
+        <button class="mobile-nav-toggle-btn" id="mobileNavToggleBtn" aria-label="Toggle navigation menu" type="button">
+          <div class="mobile-nav-icon-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span>Menu</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-nav-drawer-inner">
+      <div class="mobile-nav-drawer-header">
+        <span class="mobile-nav-drawer-title">NOIR Directory</span>
+        <button class="mobile-nav-drawer-close" id="mobileNavCloseBtn" aria-label="Close menu">✕</button>
+      </div>
+      <div class="mobile-nav-drawer-content">
+        <span class="mobile-nav-category">Signature Roasts</span>
+        <a href="original.html" class="mobile-nav-link">
+          <span class="mobile-nav-num">01</span>
+          <div>
+            <strong>The Original</strong>
+            <small>House Blend · Dark Chocolate ($24)</small>
+          </div>
+        </a>
+        <a href="after-hours.html" class="mobile-nav-link">
+          <span class="mobile-nav-num">02</span>
+          <div>
+            <strong>After Hours</strong>
+            <small>Nocturnal Roast · Rich Cocoa ($25)</small>
+          </div>
+        </a>
+        <a href="first-light.html" class="mobile-nav-link">
+          <span class="mobile-nav-num">03</span>
+          <div>
+            <strong>First Light</strong>
+            <small>Light Roast · Bergamot & Jasmine ($26)</small>
+          </div>
+        </a>
+
+        <div class="mobile-nav-divider"></div>
+
+        <span class="mobile-nav-category">Curated Box Set</span>
+        <a href="trio.html" class="mobile-nav-link highlight">
+          <span class="mobile-nav-num" style="color: var(--noir-copper-light);">★</span>
+          <div>
+            <strong>The Edition 01 Trio</strong>
+            <small>All 3 Roasts + Solid Copper Scoop ($58)</small>
+          </div>
+        </a>
+
+        <div class="mobile-nav-divider"></div>
+
+        <span class="mobile-nav-category">About NOIR</span>
+        <a href="story.html" class="mobile-nav-link">
+          <div>
+            <strong>Our Story & Roasting Craft</strong>
+            <small>Loring S35 convection & sustainable canisters</small>
+          </div>
+        </a>
+        <a href="index.html#story" class="mobile-nav-link">
+          <div>
+            <strong>Tasting Rooms</strong>
+            <small>Rotterdam (Westerkade) & Tokyo (Aoyama)</small>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="pdp-main-section">
+    <!-- Breadcrumb -->
+    <nav class="pdp-breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html#roasts" class="pdp-back-link">← All Roasts</a>
+      <span class="pdp-breadcrumb-sep">/</span>
+      <span class="pdp-breadcrumb-current">The Edition 01 Trio Box Set</span>
+    </nav>
+
+    <!-- Main Product Hero Spread -->
+    <div class="pdp-hero-grid">
+      <div class="pdp-gallery-column">
+        <div class="pdp-gallery-frame">
+          <img 
+            id="pdpMainImg" 
+            src="assets/noir-trio-collection.jpg" 
+            alt="The Edition 01 Trio collection: three spun copper canisters, solid copper scoop, and presentation box"
+          >
+        </div>
+        <div class="pdp-gallery-caption">
+          <span id="galleryCaptionMain">Three 250g spun copper canisters · Solid copper scoop</span>
+          <span id="galleryCaptionSub">Collector's rigid gift presentation box</span>
+        </div>
+
+        <!-- Gallery Thumbnail Switcher -->
+        <div class="pdp-thumbs-row">
+          <button class="pdp-thumb-chip active" id="thumbBtn1" type="button">
+            <img src="assets/noir-trio-collection.jpg" alt="The complete trio set" class="pdp-thumb-mini">
+            <div class="pdp-thumb-text">
+              <span class="pdp-thumb-title">The Complete Discovery Box</span>
+              <span class="pdp-thumb-sub">All 3 Canisters + Scoop + Box</span>
+            </div>
+          </button>
+          <button class="pdp-thumb-chip" id="thumbBtn2" type="button">
+            <img src="assets/noir-copper-scoop-detail.jpg" alt="Hand-hammered copper scoop detail" class="pdp-thumb-mini">
+            <div class="pdp-thumb-text">
+              <span class="pdp-thumb-title">Solid Copper 15g Scoop</span>
+              <span class="pdp-thumb-sub">Hand-forged & letterpress dossier</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="pdp-details-column">
+        <span class="pdp-badge">Curated Discovery Box Set · Edition 01</span>
+        <h1 class="pdp-title">The Edition 01 Trio</h1>
+        <p class="pdp-subtitle">The Complete Spectrum of Our Craft</p>
+
+        <div class="pdp-price-hero">
+          <span class="pdp-price-val" id="pdpPriceDisplay">$58</span>
+          <span class="pdp-price-unit">/ Set (Individual value $75 · Save $17)</span>
+        </div>
+
+        <p class="pdp-narrative">
+          The complete arc of our roastery in a single presentation box. From the bright bergamot dawn of First Light, through the chocolate and hazelnut comfort of The Original, to the nocturnal molasses and bourbon oak depth of After Hours. Hand-packed in a custom debossed presentation case with our solid hand-hammered 15g copper measuring scoop and letterpress tasting dossier.
+        </p>
+
+        <!-- What's in the Box List -->
+        <div class="pdp-tasting-notes-strip" style="flex-direction: column; align-items: flex-start; gap: 0.65rem;">
+          <span class="pdp-tasting-label">Included in the Box Set</span>
+          <div style="display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.88rem; color: var(--noir-ivory);">
+            <div><strong>01 The Original</strong> (250g) — Smooth chocolate, roasted hazelnut & dried fig</div>
+            <div><strong>02 After Hours</strong> (250g) — Nocturnal cocoa, molten caramel & bourbon oak</div>
+            <div><strong>03 First Light</strong> (250g) — Bergamot citrus, wild jasmine & white peach</div>
+            <div style="color: var(--noir-copper-light);"><strong>★ Solid Copper Scoop</strong> — Hand-forged, calibrated 15g dosing spoon</div>
+            <div style="color: var(--noir-copper-light);"><strong>★ Tasting Notes Dossier</strong> — 350gsm letterpress origin guide</div>
+          </div>
+        </div>
+
+        <div class="pdp-purchase-stack">
+          <!-- Grind Format Selector -->
+          <div class="pdp-selector-group">
+            <span class="pdp-selector-label">Grind Format for Canisters:</span>
+            <div class="pdp-toggle-row" id="pdpGrindRow">
+              <button class="pdp-toggle-chip active" type="button" data-grind="All Whole Bean">All Whole Bean</button>
+              <button class="pdp-toggle-chip" type="button" data-grind="All Filter / Pour-Over">All Filter / Pour-Over</button>
+              <button class="pdp-toggle-chip" type="button" data-grind="All Espresso">All Espresso</button>
+              <button class="pdp-toggle-chip" type="button" data-grind="Curated Mix (01/02 Whole, 03 Filter)">Curated Mix</button>
+            </div>
+          </div>
+
+          <!-- Gift Note Option Module -->
+          <div class="gift-note-toggle-wrap">
+            <label class="gift-checkbox-label">
+              <input type="checkbox" id="giftCheckbox">
+              <span>This is a gift (Add complimentary handwritten note card)</span>
+            </label>
+            <div class="gift-note-panel" id="giftNotePanel">
+              <input 
+                type="text" 
+                class="gift-note-input" 
+                id="giftRecipient" 
+                placeholder="Recipient's Name (e.g. Elena Rostova)"
+              >
+              <textarea 
+                class="gift-note-textarea" 
+                id="giftMessage" 
+                placeholder="Your personal message to be handwritten on our heavy letterpress cardstock (max 240 chars)..."
+                maxlength="240"
+              ></textarea>
+            </div>
+          </div>
+
+          <button class="btn-pdp-add" id="pdpAddTrioBtn" type="button">
+            Add the Trio to Bag — $58
+          </button>
+
+          <div class="pdp-dispatch-guarantee">
+            ✓ Complimentary express courier delivery included (qualifies for free shipping over $50)<br>
+            ✓ Roasted fresh weekly in small batches · Dispatched within 48h of degassing in rigid gift packaging
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Tactile Unboxing Experience -->
+    <section class="unboxing-section">
+      <div class="unboxing-header">
+        <span class="section-label">Tactile Craftsmanship</span>
+        <h2 class="section-title-large">What Lies Inside The Box</h2>
+        <p class="section-subtitle">
+          Every component was authored for physical longevity and everyday tactile delight.
+        </p>
+      </div>
+
+      <div class="unboxing-grid">
+        <div class="unboxing-card">
+          <span class="unboxing-step-num">01</span>
+          <h3 class="unboxing-card-title">The Obsidian Keepsake Box</h3>
+          <p class="unboxing-card-body">
+            Custom-engineered rigid boxboard wrapped in FSC-certified charcoal paper with a velvety soft-touch finish and debossed copper foil typography. Hidden magnetic closure ensures a crisp, satisfying seal. Designed to live permanently on your kitchen counter or be repurposed.
+          </p>
+          <span class="unboxing-card-badge">Rigid Boxboard · Magnetic Foil Seal</span>
+        </div>
+
+        <div class="unboxing-card">
+          <span class="unboxing-step-num">02</span>
+          <h3 class="unboxing-card-title">The 15g Hand-Forged Scoop</h3>
+          <p class="unboxing-card-body">
+            Turned from pure solid copper with a hand-hammered bowl and stamped with our NOIR mark. Calibrated to dispense exactly 15 grams per level measure—eliminating the need for scales during quiet, meditative morning routines.
+          </p>
+          <span class="unboxing-card-badge">Solid Copper · 15g Dosing Weight</span>
+        </div>
+
+        <div class="unboxing-card">
+          <span class="unboxing-step-num">03</span>
+          <h3 class="unboxing-card-title">Three Spun Copper Canisters</h3>
+          <p class="unboxing-card-body">
+            Seamless spun copper canisters fitted with airtight food-grade silicone gaskets and one-way aroma degassing valves. Shields coffee beans from light, air, and humidity. Infinitely refillable with our zero-plastic compostable pouches.
+          </p>
+          <span class="unboxing-card-badge">3 × 250g · Degassing Valve</span>
+        </div>
+
+        <div class="unboxing-card">
+          <span class="unboxing-step-num">04</span>
+          <h3 class="unboxing-card-title">Letterpress Tasting Dossier</h3>
+          <p class="unboxing-card-body">
+            Letterpress-printed on 350gsm wild cotton paper using a vintage Heidelberg platen press. Features harvest lot coordinates, calibrated extraction dials for four brewing methods, and cupping notes written by our head roaster.
+          </p>
+          <span class="unboxing-card-badge">Heidelberg Letterpress · 350gsm Cotton</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Sensory Progression Matrix -->
+    <section class="trio-matrix-section">
+      <div class="unboxing-header">
+        <span class="section-label">Sensory Spectrum</span>
+        <h2 class="section-title-large">Three Roasts. Three Times of Day.</h2>
+        <p class="section-subtitle">
+          Formulated as a deliberate progression from morning clarity to late-afternoon depth.
+        </p>
+      </div>
+
+      <div class="trio-matrix-grid">
+        <!-- Card 03 First Light -->
+        <div class="trio-matrix-card">
+          <div class="trio-matrix-header">
+            <div>
+              <span class="trio-matrix-time">Dawn · 06:00 – 08:30</span>
+              <h3 class="trio-matrix-name">03 First Light</h3>
+            </div>
+            <span style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--noir-copper-light);">$26</span>
+          </div>
+          <span class="trio-matrix-notes">Bergamot · Wild Jasmine · White Peach</span>
+          <p class="trio-matrix-desc">
+            Ultra-clean, luminous light roast. Sourced from high-altitude Sidama Bensa (1,950m) and Nyeri washing stations. Best suited for V60 pour-over, Chemex, and black filter extraction.
+          </p>
+          <div class="trio-matrix-meters">
+            <div class="sensory-meter-row">
+              <span class="sensory-meter-label">Acidity</span>
+              <div class="sensory-meter-track"><div class="sensory-meter-fill" style="width: 90%;"></div></div>
+              <span class="sensory-meter-score">4.5 / 5</span>
+            </div>
+            <div class="sensory-meter-row">
+              <span class="sensory-meter-label">Body</span>
+              <div class="sensory-meter-track"><div class="sensory-meter-fill" style="width: 45%;"></div></div>
+              <span class="sensory-meter-score">2.5 / 5</span>
+            </div>
+          </div>
+          <a href="first-light.html" class="btn-ghost-link" style="margin-top: auto; padding-top: 1rem;">
+            Explore First Light Details →
+          </a>
+        </div>
+
+        <!-- Card 01 The Original -->
+        <div class="trio-matrix-card" style="border-color: rgba(198, 125, 90, 0.4); background: rgba(26, 6, 10, 0.75);">
+          <div class="trio-matrix-header">
+            <div>
+              <span class="trio-matrix-time">Mid-Day · 08:30 – 13:00</span>
+              <h3 class="trio-matrix-name">01 The Original</h3>
+            </div>
+            <span style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--noir-copper-light);">$24</span>
+          </div>
+          <span class="trio-matrix-notes">Dark Chocolate · Toasted Hazelnut · Fig</span>
+          <p class="trio-matrix-desc">
+            Our signature house blend. Approachable, balanced, and comforting. Sourced from Yirgacheffe and Antigua. Exceptional as an everyday morning flat white, espresso, or standard pour-over.
+          </p>
+          <div class="trio-matrix-meters">
+            <div class="sensory-meter-row">
+              <span class="sensory-meter-label">Acidity</span>
+              <div class="sensory-meter-track"><div class="sensory-meter-fill" style="width: 40%;"></div></div>
+              <span class="sensory-meter-score">2 / 5</span>
+            </div>
+            <div class="sensory-meter-row">
+              <span class="sensory-meter-label">Body</span>
+              <div class="sensory-meter-track"><div class="sensory-meter-fill" style="width: 80%;"></div></div>
+              <span class="sensory-meter-score">4 / 5</span>
+            </div>
+          </div>
+          <a href="original.html" class="btn-ghost-link" style="margin-top: auto; padding-top: 1rem;">
+            Explore The Original Details →
+          </a>
+        </div>
+
+        <!-- Card 02 After Hours -->
+        <div class="trio-matrix-card">
+          <div class="trio-matrix-header">
+            <div>
+              <span class="trio-matrix-time">Dusk & Evening · 14:00 – Late</span>
+              <h3 class="trio-matrix-name">02 After Hours</h3>
+            </div>
+            <span style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--noir-copper-light);">$25</span>
+          </div>
+          <span class="trio-matrix-notes">Rich Cocoa · Molasses · Bourbon Oak</span>
+          <p class="trio-matrix-desc">
+            Nocturnal medium-dark roast developed for low acidity and velvety viscosity. Sourced from Sumatran Gayo Mountain and Colombian Huila. Calibrated for Moka pot, French press, or rich cortados.
+          </p>
+          <div class="trio-matrix-meters">
+            <div class="sensory-meter-row">
+              <span class="sensory-meter-label">Acidity</span>
+              <div class="sensory-meter-track"><div class="sensory-meter-fill" style="width: 25%;"></div></div>
+              <span class="sensory-meter-score">1.5 / 5</span>
+            </div>
+            <div class="sensory-meter-row">
+              <span class="sensory-meter-label">Body</span>
+              <div class="sensory-meter-track"><div class="sensory-meter-fill" style="width: 95%;"></div></div>
+              <span class="sensory-meter-score">5 / 5</span>
+            </div>
+          </div>
+          <a href="after-hours.html" class="btn-ghost-link" style="margin-top: auto; padding-top: 1rem;">
+            Explore After Hours Details →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cross Navigation to Individual Roasts -->
+    <div class="pdp-cross-link-bar">
+      <div>
+        <span class="cross-link-label">Browse Individual Roasts</span>
+        <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem; flex-wrap: wrap;">
+          <a href="original.html" class="cross-link-card">
+            <img src="assets/noir-01-the-original-wide.jpg" alt="01 The Original" class="cross-link-thumb">
+            <div>
+              <span class="cross-link-title">01 The Original ($24) →</span>
+              <span style="display: block; font-size: 0.78rem; color: var(--noir-ivory-dim);">Dark Chocolate · Hazelnut</span>
+            </div>
+          </a>
+          <a href="after-hours.html" class="cross-link-card">
+            <img src="assets/noir-02-after-hours-wide.jpg" alt="02 After Hours" class="cross-link-thumb">
+            <div>
+              <span class="cross-link-title">02 After Hours ($25) →</span>
+              <span style="display: block; font-size: 0.78rem; color: var(--noir-ivory-dim);">Rich Cocoa · Bourbon Oak</span>
+            </div>
+          </a>
+          <a href="first-light.html" class="cross-link-card">
+            <img src="assets/noir-03-first-light-wide.jpg" alt="03 First Light" class="cross-link-thumb">
+            <div>
+              <span class="cross-link-title">03 First Light ($26) →</span>
+              <span style="display: block; font-size: 0.78rem; color: var(--noir-ivory-dim);">Bergamot · Wild Jasmine</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimal Colophon Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner-grid">
+      <div class="footer-brand">
+        <h2>NOIR</h2>
+        <p>Specialty coffee roastery. Turning everyday morning cups into small, intentional rituals.</p>
+        <span class="footer-brand-locations">Rotterdam · Tokyo · Est. 2026</span>
+      </div>
+
+      <div class="footer-nav-col">
+        <h3>The Roasts</h3>
+        <ul>
+          <li><a href="original.html">01 — The Original</a></li>
+          <li><a href="after-hours.html">02 — After Hours</a></li>
+          <li><a href="first-light.html">03 — First Light</a></li>
+          <li><a href="trio.html" style="color: var(--noir-copper-light);">Edition 01 Trio</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <h3>The Roastery</h3>
+        <ul>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="story.html#science">Convection Roasting</a></li>
+          <li><a href="story.html#tasting-rooms">Rotterdam Tasting Room</a></li>
+          <li><a href="story.html#tasting-rooms">Tokyo Tasting Room</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <h3>Dispatch Updates</h3>
+        <p style="font-size: 0.85rem; color: var(--noir-ivory-dim); margin-bottom: 1rem; line-height: 1.5;">
+          Weekly small batch schedules and origin harvest field notes.
+        </p>
+        <form class="footer-newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent = 'Subscribed ✓';">
+          <input type="email" placeholder="alex@studio.com" required aria-label="Email address for dispatch updates">
+          <button type="submit">→</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-legal-bar">
+      <span>© 2026 NOIR Specialty Roasters BV. All rights reserved.</span>
+      <span>Spun copper canisters designed for a lifetime of re-use.</span>
+      <span>Crafted with intentional restraint.</span>
+    </div>
+  </footer>
+
+  <!-- Ritual Bag Drawer Modal -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true">
+    <div class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <div class="drawer-header">
+        <h3 class="drawer-title" id="drawerTitle">Your Bag</h3>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close bag">✕</button>
+      </div>
+
+      <div class="shipping-meter" id="shippingMeter">
+        <div class="shipping-meter-text" id="shippingMeterText">
+          Add $26.00 for complimentary courier delivery
+        </div>
+        <div class="shipping-meter-bar">
+          <div class="shipping-meter-fill" id="shippingMeterFill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <div class="drawer-items" id="drawerItems">
+        <!-- Rendered dynamically by noir.js -->
+      </div>
+
+      <div class="drawer-footer">
+        <div class="drawer-subtotal-line">
+          <span class="subtotal-label">Subtotal</span>
+          <span class="subtotal-val" id="drawerSubtotal">$0.00</span>
+        </div>
+        <p class="drawer-tax-note">Taxes & shipping calculated at courier checkout.</p>
+        <button class="btn-checkout" id="drawerCheckoutBtn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/noir.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initTrioPage();
+    });
+
+    function initTrioPage() {
+      const mainImg = document.getElementById('pdpMainImg');
+      const thumbBtn1 = document.getElementById('thumbBtn1');
+      const thumbBtn2 = document.getElementById('thumbBtn2');
+      const captionMain = document.getElementById('galleryCaptionMain');
+      const captionSub = document.getElementById('galleryCaptionSub');
+
+      const grindButtons = document.querySelectorAll('#pdpGrindRow .pdp-toggle-chip');
+      const giftCheckbox = document.getElementById('giftCheckbox');
+      const giftNotePanel = document.getElementById('giftNotePanel');
+      const giftRecipient = document.getElementById('giftRecipient');
+      const giftMessage = document.getElementById('giftMessage');
+      const addBtn = document.getElementById('pdpAddTrioBtn');
+
+      let currentGrind = 'All Whole Bean';
+
+      // 1. Gallery image switcher
+      if (thumbBtn1 && thumbBtn2 && mainImg) {
+        thumbBtn1.addEventListener('click', () => {
+          thumbBtn1.classList.add('active');
+          thumbBtn2.classList.remove('active');
+          mainImg.src = 'assets/noir-trio-collection.jpg';
+          mainImg.alt = 'The Edition 01 Trio collection: three spun copper canisters, solid copper scoop, and presentation box';
+          if (captionMain) captionMain.textContent = 'Three 250g spun copper canisters · Solid copper scoop';
+          if (captionSub) captionSub.textContent = "Collector's rigid gift presentation box";
+        });
+
+        thumbBtn2.addEventListener('click', () => {
+          thumbBtn2.classList.add('active');
+          thumbBtn1.classList.remove('active');
+          mainImg.src = 'assets/noir-copper-scoop-detail.jpg';
+          mainImg.alt = 'Hand-forged solid copper measuring scoop engraved with NOIR 15g and letterpress tasting dossier';
+          if (captionMain) captionMain.textContent = 'Solid copper scoop (calibrated 15g) · Hand-hammered finish';
+          if (captionSub) captionSub.textContent = 'Letterpress tasting dossier on 350gsm wild cotton cardstock';
+        });
+      }
+
+      // 2. Grind format selector
+      grindButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          grindButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentGrind = btn.getAttribute('data-grind');
+        });
+      });
+
+      // 3. Gift Note checkbox toggle
+      if (giftCheckbox && giftNotePanel) {
+        giftCheckbox.addEventListener('change', () => {
+          if (giftCheckbox.checked) {
+            giftNotePanel.classList.add('open');
+            giftRecipient.focus();
+          } else {
+            giftNotePanel.classList.remove('open');
+          }
+        });
+      }
+
+      // 4. Add to Bag trigger
+      if (addBtn) {
+        addBtn.addEventListener('click', () => {
+          const isGift = giftCheckbox && giftCheckbox.checked;
+          const recipientVal = giftRecipient ? giftRecipient.value.trim() : '';
+          const msgVal = giftMessage ? giftMessage.value.trim() : '';
+
+          let giftDetail = '';
+          if (isGift && (recipientVal || msgVal)) {
+            giftDetail = ` · Gift for ${recipientVal || 'Recipient'} (${msgVal ? 'Custom note enclosed' : 'Handwritten card'})`;
+          } else if (isGift) {
+            giftDetail = ' · Complimentary Gift Card Enclosed';
+          }
+
+          addToBag({
+            id: `edition-01-trio-${currentGrind.toLowerCase().replace(/[\s\/\(\)]+/g, '-')}${isGift ? '-gift' : ''}`,
+            name: 'The Edition 01 Trio Collection',
+            desc: `3 × 250g Spun Copper Canisters + Solid Copper Scoop · ${currentGrind}${giftDetail}`,
+            price: 58,
+            image: 'assets/noir-trio-collection.jpg'
+          });
+          openDrawer();
+        });
+      }
+    }
+  </script>
+</body>
+</html>

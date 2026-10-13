@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 First Light — Luminous Light Roast | NOIR</title>
+  <meta name="description" content="First Light is NOIR's bright, luminous roast with citrus and floral notes. Roasted for manual drip and curious palates. Sealed in spun copper canisters.">
+  
+  <link rel="stylesheet" href="css/noir.css">
+</head>
+<body>
+
+  <!-- Atmospheric Substrate -->
+  <div class="atmosphere-glow" aria-hidden="true"></div>
+  <svg class="grain-overlay" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <filter id="noir-noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noir-noise)" />
+  </svg>
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="masthead-brand">
+        <a href="index.html" class="brand-logo" aria-label="NOIR Specialty Coffee">NOIR</a>
+        <span class="brand-tagline-sub">Specialty Coffee Roasters</span>
+      </div>
+
+      <nav class="masthead-nav" aria-label="Main Navigation">
+        <div class="nav-dropdown-wrap">
+          <a href="index.html#roasts" class="nav-item">
+            <span>The Roasts</span>
+            <span class="nav-dropdown-arrow">▾</span>
+          </a>
+          <div class="nav-dropdown-menu">
+            <div class="nav-dropdown-inner">
+              <a href="original.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num">01</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">The Original</span>
+                  <span class="dropdown-item-desc">Signature House Blend · Dark Chocolate</span>
+                </div>
+              </a>
+              <a href="after-hours.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num">02</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">After Hours</span>
+                  <span class="dropdown-item-desc">Nocturnal Roast · Rich Cocoa & Caramel</span>
+                </div>
+              </a>
+              <a href="first-light.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num">03</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">First Light</span>
+                  <span class="dropdown-item-desc">Luminous Light Roast · Bergamot & Jasmine</span>
+                </div>
+              </a>
+              <div class="nav-dropdown-divider"></div>
+              <a href="trio.html" class="nav-dropdown-item">
+                <span class="dropdown-item-num" style="color: var(--noir-copper-light);">★</span>
+                <div class="dropdown-item-content">
+                  <span class="dropdown-item-name">The Edition 01 Trio</span>
+                  <span class="dropdown-item-desc">All 3 Roasts + Solid Copper Scoop ($58)</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="story.html" class="nav-item">Our Story</a>
+        <a href="trio.html" class="nav-item">The Trio</a>
+        <button class="masthead-bag-btn" id="bagBtn" aria-label="Open bag">
+          <span>Bag</span>
+          <span class="bag-count">(0)</span>
+        </button>
+        <button class="mobile-nav-toggle-btn" id="mobileNavToggleBtn" aria-label="Toggle navigation menu" type="button">
+          <div class="mobile-nav-icon-bars" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span>Menu</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-nav-drawer-inner">
+      <div class="mobile-nav-drawer-header">
+        <span class="mobile-nav-drawer-title">NOIR Directory</span>
+        <button class="mobile-nav-drawer-close" id="mobileNavCloseBtn" aria-label="Close menu">✕</button>
+      </div>
+      <div class="mobile-nav-drawer-content">
+        <span class="mobile-nav-category">Signature Roasts</span>
+        <a href="original.html" class="mobile-nav-link">
+          <span class="mobile-nav-num">01</span>
+          <div>
+            <strong>The Original</strong>
+            <small>House Blend · Dark Chocolate ($24)</small>
+          </div>
+        </a>
+        <a href="after-hours.html" class="mobile-nav-link">
+          <span class="mobile-nav-num">02</span>
+          <div>
+            <strong>After Hours</strong>
+            <small>Nocturnal Roast · Rich Cocoa ($25)</small>
+          </div>
+        </a>
+        <a href="first-light.html" class="mobile-nav-link highlight">
+          <span class="mobile-nav-num">03</span>
+          <div>
+            <strong>First Light</strong>
+            <small>Light Roast · Bergamot & Jasmine ($26)</small>
+          </div>
+        </a>
+
+        <div class="mobile-nav-divider"></div>
+
+        <span class="mobile-nav-category">Curated Box Set</span>
+        <a href="trio.html" class="mobile-nav-link">
+          <span class="mobile-nav-num" style="color: var(--noir-copper-light);">★</span>
+          <div>
+            <strong>The Edition 01 Trio</strong>
+            <small>All 3 Roasts + Solid Copper Scoop ($58)</small>
+          </div>
+        </a>
+
+        <div class="mobile-nav-divider"></div>
+
+        <span class="mobile-nav-category">About NOIR</span>
+        <a href="story.html" class="mobile-nav-link">
+          <div>
+            <strong>Our Story & Roasting Craft</strong>
+            <small>Loring S35 convection & sustainable canisters</small>
+          </div>
+        </a>
+        <a href="index.html#story" class="mobile-nav-link">
+          <div>
+            <strong>Tasting Rooms</strong>
+            <small>Rotterdam (Westerkade) & Tokyo (Aoyama)</small>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="pdp-main-section">
+    <!-- Breadcrumb -->
+    <nav class="pdp-breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html#roasts" class="pdp-back-link">← All Roasts</a>
+      <span class="pdp-breadcrumb-sep">/</span>
+      <span class="pdp-breadcrumb-current">03 First Light</span>
+    </nav>
+
+    <!-- Main Product Hero Spread -->
+    <div class="pdp-hero-grid">
+      <div class="pdp-gallery-column">
+        <div class="pdp-gallery-frame">
+          <img 
+            id="pdpMainImg" 
+            src="assets/noir-03-first-light-wide.jpg" 
+            alt="NOIR First Light luminous light roast on pale oak table"
+          >
+        </div>
+        <div class="pdp-gallery-caption">
+          <span>Spun copper canister · 250g whole bean</span>
+          <span>Pale oak table in natural daylight</span>
+        </div>
+      </div>
+
+      <div class="pdp-details-column">
+        <span class="pdp-badge">Roast 03 · Luminous Light Roast</span>
+        <h1 class="pdp-title">First Light</h1>
+        <p class="pdp-subtitle">For Slower Mornings & Curious Palates</p>
+
+        <div class="pdp-price-hero">
+          <span class="pdp-price-val" id="pdpPriceDisplay">$26</span>
+          <span class="pdp-price-unit">/ 250g spun copper canister</span>
+        </div>
+
+        <p class="pdp-narrative">
+          A brighter, lighter roast roasted specifically for manual drip and pour-over clarity. Delicate, tea-like elegance that rewards slower mornings and curious palates. Luminous notes of bergamot citrus, wild jasmine petals, and ripe white peach with vibrant, sweet acidity.
+        </p>
+
+        <div class="pdp-tasting-notes-strip">
+          <span class="pdp-tasting-label">Tasting Notes</span>
+          <span class="pdp-tasting-items">Bergamot Citrus · Wild Jasmine · White Peach</span>
+        </div>
+
+        <div class="pdp-purchase-stack">
+          <!-- Purchase Option Selector -->
+          <div class="pdp-selector-group">
+            <span class="pdp-selector-label">Purchase Option:</span>
+            <div class="pdp-toggle-row" id="pdpFreqRow">
+              <button class="pdp-toggle-chip active" type="button" data-freq="once" data-price="26">One-Time ($26)</button>
+              <button class="pdp-toggle-chip" type="button" data-freq="sub" data-price="23">Subscribe ($23 · Save 12%)</button>
+            </div>
+          </div>
+
+          <!-- Grind Selection -->
+          <div class="pdp-selector-group">
+            <span class="pdp-selector-label">Grind Format:</span>
+            <div class="pdp-toggle-row" id="pdpGrindRow">
+              <button class="pdp-toggle-chip active" type="button" data-grind="Whole Bean">Whole Bean</button>
+              <button class="pdp-toggle-chip" type="button" data-grind="Kalita / V60">Kalita / V60</button>
+              <button class="pdp-toggle-chip" type="button" data-grind="Chemex">Chemex</button>
+              <button class="pdp-toggle-chip" type="button" data-grind="Aeropress">Aeropress</button>
+            </div>
+          </div>
+
+          <button class="btn-pdp-add" id="pdpAddToCartBtn" type="button">
+            Add to Bag — $26
+          </button>
+
+          <div class="pdp-dispatch-guarantee">
+            Fresh batch roasted weekly · Dispatched within 48h of degassing
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Origin & Harvest Details -->
+    <section class="pdp-details-section">
+      <div class="pdp-spec-col">
+        <h3>Harvest & Terroir</h3>
+        <p style="font-size: 1rem; color: var(--noir-ivory-dim); line-height: 1.7; margin-bottom: 2rem;">
+          High-elevation micro-lots from the Bensa district of Sidama, intercropped with native shade trees and slow-dried. Blended with Kenya Nyeri SL28 varietals for dazzling phosphoric brightness and stone-fruit sweetness.
+        </p>
+
+        <div class="pdp-spec-table">
+          <div class="pdp-spec-row">
+            <span class="pdp-spec-key">Origins</span>
+            <span class="pdp-spec-val">Sidama Bensa (Ethiopia) & Nyeri (Kenya)</span>
+          </div>
+          <div class="pdp-spec-row">
+            <span class="pdp-spec-key">Altitude</span>
+            <span class="pdp-spec-val">1,950m – 2,150m above sea level</span>
+          </div>
+          <div class="pdp-spec-row">
+            <span class="pdp-spec-key">Processing</span>
+            <span class="pdp-spec-val">Double Fermented Washed & Extended Drying</span>
+          </div>
+          <div class="pdp-spec-row">
+            <span class="pdp-spec-key">Roast Method</span>
+            <span class="pdp-spec-val">Gentle convection profile preserving delicate aromatics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pdp-spec-col">
+        <h3>Sensory Profile</h3>
+        <p style="font-size: 1rem; color: var(--noir-ivory-dim); line-height: 1.7; margin-bottom: 2rem;">
+          Crisp, floral, and crystalline. Formulated for Chemex carafes, manual drippers, or refreshing cold-brew infusions.
+        </p>
+
+        <div class="sensory-meter-row">
+          <span class="sensory-meter-label">Sweetness</span>
+          <div class="sensory-meter-track"><div class="sensory-meter-fill" style="width: 85%;"></div></div>
+          <span class="sensory-meter-score">4 / 5</span>
+        </div>
+
+        <div class="sensory-meter-row">
+          <span class="sensory-meter-label">Body</span>
+          <div class="sensory-meter-track"><div class="sensory-meter-fill" style="width: 40%;"></div></div>
+          <span class="sensory-meter-score">2 / 5</span>
+        </div>
+
+        <div class="sensory-meter-row">
+          <span class="sensory-meter-label">Acidity</span>
+          <div class="sensory-meter-track"><div class="sensory-meter-fill" style="width: 90%;"></div></div>
+          <span class="sensory-meter-score">4.5 / 5</span>
+        </div>
+
+        <div class="sensory-meter-row">
+          <span class="sensory-meter-label">Finish</span>
+          <div class="sensory-meter-track"><div class="sensory-meter-fill" style="width: 80%;"></div></div>
+          <span class="sensory-meter-score">4 / 5</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Brew Guide Calculator -->
+    <section class="pdp-brew-section">
+      <div class="pdp-brew-header">
+        <h2 class="pdp-brew-title">Dial In Your Morning Drip</h2>
+        <p class="pdp-brew-subtitle">
+          Calibrated brew guidelines developed at our tasting room for balanced extraction. Select your brewing device to see exact measurements.
+        </p>
+      </div>
+
+      <div class="brew-calculator-box">
+        <div class="brew-controls">
+          <div>
+            <span class="pdp-selector-label" style="display: block; margin-bottom: 0.6rem;">Brewing Method:</span>
+            <div class="brew-method-nav" id="brewMethodNav">
+              <button class="brew-method-btn active" type="button" data-method="v60">V60 / Pour-Over</button>
+              <button class="brew-method-btn" type="button" data-method="chemex">Chemex</button>
+              <button class="brew-method-btn" type="button" data-method="aeropress">AeroPress</button>
+              <button class="brew-method-btn" type="button" data-method="kalita">Kalita Wave</button>
+            </div>
+          </div>
+
+          <div>
+            <span class="pdp-selector-label" style="display: block; margin-bottom: 0.6rem;">Servings:</span>
+            <div class="brew-servings-bar" id="brewServingsBar">
+              <button class="serving-chip active" type="button" data-servings="1">1 Serving</button>
+              <button class="serving-chip" type="button" data-servings="2">2 Servings</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="brew-output-card" id="brewOutputCard">
+          <div class="brew-spec-grid">
+            <div class="brew-spec-item">
+              <span class="brew-spec-label">Dose</span>
+              <span class="brew-spec-val" id="brewDose">15g</span>
+            </div>
+            <div class="brew-spec-item">
+              <span class="brew-spec-label">Water / Yield</span>
+              <span class="brew-spec-val" id="brewYield">250g water</span>
+            </div>
+            <div class="brew-spec-item">
+              <span class="brew-spec-label">Water Temp</span>
+              <span class="brew-spec-val" id="brewTemp">92.0°C</span>
+            </div>
+          </div>
+          <p class="brew-step-note" id="brewNote">
+            Medium-fine grind. Bloom with 45g water for 40s. Two continuous concentric spiral pours. Total brew time 3m 10s for pure jasmine aroma.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cross Navigation to Next Roast -->
+    <div class="pdp-cross-link-bar">
+      <div>
+        <span class="cross-link-label">Browse Preceding Roast</span>
+        <a href="after-hours.html" class="cross-link-card" style="margin-top: 0.5rem;">
+          <img src="assets/noir-02-after-hours-wide.jpg" alt="After Hours" class="cross-link-thumb">
+          <div>
+            <span class="cross-link-title">← 02 After Hours</span>
+            <span style="display: block; font-size: 0.8rem; color: var(--noir-ivory-dim);">Nocturnal Roast · Rich cocoa & molten caramel</span>
+          </div>
+        </a>
+      </div>
+
+      <div>
+        <a href="trio.html" class="cross-link-card">
+          <img src="assets/noir-trio-collection.jpg" alt="The Trio" class="cross-link-thumb">
+          <div>
+            <span class="cross-link-label">Complete Collection</span>
+            <span class="cross-link-title">The Edition 01 Trio ($58) →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimal Colophon Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner-grid">
+      <div class="footer-brand">
+        <h2>NOIR</h2>
+        <p>Specialty coffee roastery. Turning everyday morning cups into small, intentional rituals.</p>
+        <span class="footer-brand-locations">Rotterdam · Tokyo · Est. 2026</span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tasting Rooms</h4>
+        <ul class="footer-nav-list">
+          <li><strong>Rotterdam:</strong> Westerkade 14</li>
+          <li style="color: var(--noir-ivory-faint); font-size: 0.82rem;">Wed–Sun: 07:30 – 16:00</li>
+          <li style="margin-top: 0.5rem;"><strong>Tokyo:</strong> 3-12-8 Minami-Aoyama</li>
+          <li style="color: var(--noir-ivory-faint); font-size: 0.82rem;">Daily: 08:00 – 17:00</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="original.html">01 The Original</a></li>
+          <li><a href="after-hours.html">02 After Hours</a></li>
+          <li><a href="index.html#roasts">The Roasts</a></li>
+          <li><a href="trio.html">Edition 01 Trio</a></li>
+          <li><a href="story.html">Our Story</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>The Morning Dispatch</h4>
+        <p class="footer-newsletter-text">A quiet fortnightly note on roast releases and morning habits. No spam.</p>
+        <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to The Morning Dispatch.');">
+          <input type="email" class="newsletter-input" placeholder="Your email" required>
+          <button type="submit" class="newsletter-btn">Join</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-legal-bar">
+      <span>© 2026 NOIR Specialty Roasters. All rights reserved.</span>
+      <span>Make time for the ritual.</span>
+      <span>Complimentary shipping over $50</span>
+    </div>
+  </footer>
+
+  <!-- Slide-over Bag Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true">
+    <aside class="ritual-drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <div class="drawer-header">
+        <h3 id="drawerTitle" class="drawer-title">Your Bag</h3>
+        <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close bag">✕</button>
+      </div>
+
+      <div class="shipping-meter-wrap" id="shippingMeter">
+        <span class="shipping-meter-text" id="shippingMeterText">Add $50.00 for complimentary courier delivery</span>
+        <div class="shipping-progress-track">
+          <div class="shipping-progress-fill" id="shippingMeterFill"></div>
+        </div>
+      </div>
+
+      <div class="drawer-items" id="drawerItems">
+        <!-- Rendered dynamically by noir.js -->
+      </div>
+
+      <div class="drawer-footer">
+        <div class="drawer-subtotal-row">
+          <span class="drawer-subtotal-label">Subtotal</span>
+          <span class="drawer-subtotal-val" id="drawerSubtotal">$0.00</span>
+        </div>
+        <button class="btn-checkout" id="drawerCheckoutBtn">
+          Proceed to Checkout
+        </button>
+        <p class="drawer-dispatch-note">
+          Complimentary courier dispatch on orders over $50
+        </p>
+      </div>
+    </aside>
+  </div>
+
+  <script src="js/noir.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      initPdpPage();
+    });
+
+    function initPdpPage() {
+      const priceDisplay = document.getElementById('pdpPriceDisplay');
+      const addBtn = document.getElementById('pdpAddToCartBtn');
+      const freqButtons = document.querySelectorAll('#pdpFreqRow .pdp-toggle-chip');
+      const grindButtons = document.querySelectorAll('#pdpGrindRow .pdp-toggle-chip');
+
+      let currentPrice = 26;
+      let currentFreq = 'once';
+      let currentGrind = 'Whole Bean';
+
+      freqButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          freqButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFreq = btn.getAttribute('data-freq');
+          currentPrice = parseInt(btn.getAttribute('data-price'), 10);
+          if (priceDisplay) priceDisplay.textContent = `$${currentPrice}`;
+          if (addBtn) addBtn.textContent = `Add to Bag — $${currentPrice}`;
+        });
+      });
+
+      grindButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          grindButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentGrind = btn.getAttribute('data-grind');
+        });
+      });
+
+      if (addBtn) {
+        addBtn.addEventListener('click', () => {
+          const planLabel = currentFreq === 'sub' ? 'Subscription (Every 4 weeks)' : 'One-time dispatch';
+          addToBag({
+            id: `roast-03-${currentGrind.toLowerCase().replace(/[\s\/]+/g, '-')}-${currentFreq}`,
+            name: `Roast 03 — First Light`,
+            desc: `250g Spun Copper Canister · ${currentGrind} · ${planLabel}`,
+            price: currentPrice,
+            image: 'assets/noir-03-first-light-wide.jpg'
+          });
+          openDrawer();
+        });
+      }
+
+      // Brew Calculator logic for Roast 03
+      const brewRecipes = {
+        v60: {
+          dose1: '15g', yield1: '250g water', temp: '92.0°C',
+          dose2: '30g', yield2: '500g water',
+          note: 'Medium-fine grind. Bloom with 45g water for 40s. Gentle concentric spiral pours. Total brew time 3m 10s for pure jasmine aroma.'
+        },
+        chemex: {
+          dose1: '20g', yield1: '320g water', temp: '93.0°C',
+          dose2: '40g', yield2: '640g water',
+          note: 'Medium-coarse grind through thick Chemex bonded filter. Slow steady center pour brings out crystalline white peach clarity.'
+        },
+        aeropress: {
+          dose1: '14g', yield1: '200g water', temp: '88.0°C',
+          dose2: '28g', yield2: '400g water',
+          note: 'Short 1-minute extraction with lower temperature highlights aromatic citrus florals with sweet honey finish.'
+        },
+        kalita: {
+          dose1: '15.5g', yield1: '250g water', temp: '91.5°C',
+          dose2: '31g', yield2: '500g water',
+          note: 'Flat-bed three-hole flow produces extraordinarily consistent extraction with bright bergamot and floral sweetness.'
+        }
+      };
+
+      let activeMethod = 'v60';
+      let activeServings = 1;
+
+      const methodBtns = document.querySelectorAll('#brewMethodNav .brew-method-btn');
+      const servingBtns = document.querySelectorAll('#brewServingsBar .serving-chip');
+      const doseEl = document.getElementById('brewDose');
+      const yieldEl = document.getElementById('brewYield');
+      const tempEl = document.getElementById('brewTemp');
+      const noteEl = document.getElementById('brewNote');
+
+      function updateBrewDisplay() {
+        const recipe = brewRecipes[activeMethod];
+        if (!recipe) return;
+        if (doseEl) doseEl.textContent = activeServings === 1 ? recipe.dose1 : recipe.dose2;
+        if (yieldEl) yieldEl.textContent = activeServings === 1 ? recipe.yield1 : recipe.yield2;
+        if (tempEl) tempEl.textContent = recipe.temp;
+        if (noteEl) noteEl.textContent = recipe.note;
+      }
+
+      methodBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          methodBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeMethod = btn.getAttribute('data-method');
+          updateBrewDisplay();
+        });
+      });
+
+      servingBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          servingBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeServings = parseInt(btn.getAttribute('data-servings'), 10);
+          updateBrewDisplay();
+        });
+      });
+    }
+  </script>
+</body>
+</html>
