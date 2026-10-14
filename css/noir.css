@@ -2136,6 +2136,54 @@ main {
   padding: 0.5rem 0;
 }
 
+.checkout-demo-banner {
+  background: rgba(198, 125, 90, 0.08);
+  border: 1px solid rgba(198, 125, 90, 0.35);
+  border-radius: 2px;
+  padding: 0.85rem 1rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.demo-banner-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--noir-copper-light);
+  margin-top: 0.35rem;
+  flex-shrink: 0;
+}
+
+.checkout-demo-banner strong {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--noir-copper-light);
+  margin-bottom: 0.2rem;
+}
+
+.checkout-demo-banner span {
+  display: block;
+  font-size: 0.76rem;
+  color: var(--noir-ivory-dim);
+  line-height: 1.45;
+}
+
+.docket-demo-tag {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--noir-copper-light);
+  background: rgba(198, 125, 90, 0.1);
+  border: 1px solid rgba(198, 125, 90, 0.25);
+  padding: 0.4rem 0.75rem;
+  border-radius: 2px;
+  text-align: center;
+  font-weight: 500;
+}
+
 .checkout-view-header {
   display: flex;
   align-items: baseline;

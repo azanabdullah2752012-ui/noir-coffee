@@ -224,6 +224,14 @@ function renderCheckoutView() {
 
   itemsContainer.innerHTML = `
     <div class="checkout-view-wrap">
+      <div class="checkout-demo-banner">
+        <div class="demo-banner-dot" aria-hidden="true"></div>
+        <div>
+          <strong>Interactive Prototype Mode</strong>
+          <span>This storefront is a design & engineering demonstration. Payment and order routing are simulated for evaluation; no actual charges will occur.</span>
+        </div>
+      </div>
+
       <div class="checkout-view-header">
         <button class="checkout-back-btn" id="checkoutBackToBagBtn" type="button">
           ← Back to Bag (${bag.reduce((sum, item) => sum + item.qty, 0)})
@@ -233,39 +241,39 @@ function renderCheckoutView() {
         </span>
       </div>
 
-      <!-- Express Checkout -->
+      <!-- Express Checkout Simulation -->
       <button class="btn-apple-pay" id="applePayBtn" type="button">
         <span>Pay</span>
-        <span style="font-size: 0.82rem; font-weight: 400; opacity: 0.85;">Express Checkout</span>
+        <span style="font-size: 0.82rem; font-weight: 400; opacity: 0.85;">Simulated Demo Checkout</span>
       </button>
 
-      <div class="checkout-or-divider">or enter courier details</div>
+      <div class="checkout-or-divider">or enter shipping details</div>
 
       <!-- Delivery Address Form -->
       <form id="checkoutForm" onsubmit="event.preventDefault(); submitOrder();" style="display: flex; flex-direction: column; gap: 1rem;">
         <div class="checkout-field-row">
           <label class="checkout-field-label">Email for Roast Dispatch Updates</label>
-          <input type="email" class="checkout-text-input" placeholder="alex@studio.com" required value="alex@studio.com">
+          <input type="email" class="checkout-text-input" placeholder="e.g. yourname@domain.com" required>
         </div>
 
         <div class="checkout-field-row">
           <label class="checkout-field-label">Full Name</label>
-          <input type="text" class="checkout-text-input" placeholder="Alexandre Laurent" required value="Alexandre Laurent">
+          <input type="text" class="checkout-text-input" placeholder="e.g. Alexandre Laurent" required>
         </div>
 
         <div class="checkout-field-row">
           <label class="checkout-field-label">Delivery Street Address</label>
-          <input type="text" class="checkout-text-input" placeholder="Keizersgracht 384" required value="Keizersgracht 384">
+          <input type="text" class="checkout-text-input" placeholder="e.g. Keizersgracht 384, Apt 4" required>
         </div>
 
         <div class="checkout-split-fields">
           <div class="checkout-field-row">
             <label class="checkout-field-label">Postal Code</label>
-            <input type="text" class="checkout-text-input" placeholder="1016 GB" required value="1016 GB">
+            <input type="text" class="checkout-text-input" placeholder="e.g. 1016 GB" required>
           </div>
           <div class="checkout-field-row">
             <label class="checkout-field-label">City</label>
-            <input type="text" class="checkout-text-input" placeholder="Amsterdam" required value="Amsterdam">
+            <input type="text" class="checkout-text-input" placeholder="e.g. Amsterdam" required>
           </div>
         </div>
 
@@ -281,7 +289,7 @@ function renderCheckoutView() {
         </div>
 
         <button type="submit" class="btn-checkout" style="margin-top: 0.5rem;">
-          Authorize & Place Order · $${totalAmount.toFixed(2)}
+          Generate Demo Dispatch Docket · $${totalAmount.toFixed(2)}
         </button>
       </form>
     </div>
@@ -320,7 +328,7 @@ function renderDispatchDocket(orderRef, totalAmount, items) {
   const itemsContainer = document.getElementById('drawerItems');
   const drawerTitle = document.getElementById('drawerTitle');
 
-  if (drawerTitle) drawerTitle.textContent = 'Order Confirmed';
+  if (drawerTitle) drawerTitle.textContent = 'Simulated Dispatch';
 
   if (!itemsContainer) return;
 
@@ -329,6 +337,10 @@ function renderDispatchDocket(orderRef, totalAmount, items) {
 
   itemsContainer.innerHTML = `
     <div class="dispatch-docket">
+      <div class="docket-demo-tag">
+        Portfolio Prototype · Demonstration Order Only
+      </div>
+
       <div class="docket-stamp">
         <div>
           <span class="docket-brand-mark">NOIR</span>
@@ -345,7 +357,7 @@ function renderDispatchDocket(orderRef, totalAmount, items) {
       </div>
 
       <div class="docket-status-badge">
-        Confirmed · Roastery Dispatch Queue
+        Queue Preview · Small-Batch Roasting Schedule
       </div>
 
       <div class="docket-meta-grid">
@@ -382,16 +394,16 @@ function renderDispatchDocket(orderRef, totalAmount, items) {
       </div>
 
       <div class="docket-total-line">
-        <span style="font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--noir-ivory-dim);">Total Charged</span>
+        <span style="font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--noir-ivory-dim);">Simulated Total</span>
         <span class="docket-total-val">$${totalAmount.toFixed(2)}</span>
       </div>
 
       <div class="docket-guarantee-note">
-        Your coffee is roasted in small batches. Degassing window starts immediately; peak flavor will develop within 4–14 days. Dispatch tracking link dispatched to your email.
+        This dispatch docket illustrates NOIR's small-batch roasting and degassing workflow. In production, this step triggers cold courier fulfillment via a verified payment gateway webhook.
       </div>
 
       <button id="docketCompleteBtn" class="btn-checkout" type="button" style="margin-top: 0.5rem;">
-        Complete & Return to Roastery
+        Complete Demo & Clear Bag
       </button>
     </div>
   `;

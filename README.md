@@ -11,6 +11,8 @@
 
 **NOIR** is a direct-to-consumer digital flagship store for an artisanal coffee roastery operating out of Rotterdam and Tokyo. The project showcases three debut single-origin / signature house roasts alongside a collector's discovery set, paired with tactile digital e-commerce mechanics.
 
+> **Note**: This repository serves as a design and frontend engineering demonstration. Checkout and order fulfillment flows are simulated for interactive evaluation.
+
 ### The Collection
 * **01 — The Original**: Signature House Blend (Yirgacheffe & Antigua). Smooth dark chocolate, toasted hazelnut, and dried fig.
 * **02 — After Hours**: Nocturnal Roast (Gayo Mountain & Huila). Low-acidity evening roast with molten caramel, Dutch cocoa, and bourbon oak.
@@ -22,7 +24,7 @@
 ## ✨ Features & Architecture
 
 * **Multi-Page Product Architecture**:
-  * `index.html`: Continuous vertical landing experience with interactive roast matcher and quick-add trays.
+  * `index.html`: Continuous vertical landing experience with streamined editorial showcase and quick-add trays.
   * `original.html`: Dedicated PDP with harvest terroir specs, sensory balance meters, and interactive 4-method brew calculator (Espresso, V60, French Press, AeroPress).
   * `after-hours.html`: Dedicated PDP for Roast 02 with extraction ratios for Moka pot, French press, and espresso.
   * `first-light.html`: Dedicated PDP for Roast 03 with light-roast pour-over dial-in guidelines.
@@ -31,7 +33,7 @@
 * **Persistent Cart & Checkout Engine (`js/noir.js`)**:
   * Cross-page bag persistence powered by `localStorage`.
   * Dynamic Free Courier progress meter ($50 threshold).
-  * Two-step courier checkout modal with express Apple Pay simulation and printable digital **Dispatch Docket**.
+  * Two-step courier checkout simulation with demonstration Apple Pay and interactive digital **Dispatch Docket**.
 * **Ergonomic Mobile Navigation**:
   * Persistent masthead Bag access on small viewports.
   * Full-featured mobile directory drawer (`#mobileNavDrawer`) for seamless cross-page jumping on mobile phones and tablets.
